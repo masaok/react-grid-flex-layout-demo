@@ -11,33 +11,35 @@ const useStyles = makeStyles(theme => ({
     // height: '100vh', // required to fill screen vertically
     // justifyContent: 'center',
     // maxHeight: '100vh',
-  },
 
-  grid: {
     display: 'grid',
-    // gridTemplateColumns: '1fr',
-    // width: '100vw',
+    gridTemplateRows: '100px auto 100px',
+
+    width: '100vw',
     height: '100vh',
+    margin: 0,
+    padding: 0,
   },
 
   header: {
     display: 'flex',
     flex: 1,
-    height: 100,
   },
 
   content: {
     // TODO: If content does not fill the content area; it hovers in the vertical middle weird
     display: 'flex',
     flex: 1,
-    overflowX: 'hidden', // required to scroll content area *only*
+    overflowY: 'scroll', // required to scroll content area *only*
+
+    backgroundColor: 'lightgreen',
   },
 
   footer: {
     display: 'flex',
     flex: 1,
-    height: 100,
-    width: '100vw',
+    // height: 100,
+    // width: '100vw',
   },
 }))
 
@@ -50,13 +52,11 @@ const HeaderContentFooterLayout = props => {
   console.log(Header)
 
   return (
-    <div className={classes.headerContentFooterLayout}>
-      <div className={classes.grid}>
-        <div className={classes.header}>{Header ? <Header {...rest} /> : 'HEADER MISSING'}</div>
-        <div className={classes.content}>{Content ? <Content {...rest} /> : 'CONTENT MISSING'}</div>
-        <div className={classes.footer}>{Footer ? <Footer {...rest} /> : 'FOOTER MISSING'}</div>
-      </div>
-    </div>
+    <main className={classes.headerContentFooterLayout}>
+      <header className={classes.header}>{Header ? <Header {...rest} /> : 'HEADER MISSING'}</header>
+      <section className={classes.content}>{Content ? <Content {...rest} /> : 'CONTENT MISSING'}</section>
+      <footer className={classes.footer}>{Footer ? <Footer {...rest} /> : 'FOOTER MISSING'}</footer>
+    </main>
   )
 }
 

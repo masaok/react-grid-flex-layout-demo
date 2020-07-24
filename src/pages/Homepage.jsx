@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    backgroundColor: 'lightgreen',
+    // backgroundColor: 'lightgreen',
     padding: theme.spacing(2),
     // overflowX: 'hidden',
   },

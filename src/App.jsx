@@ -20,6 +20,21 @@ import HeaderContentFooterLayout from './layouts/HeaderContentFooterLayout'
 
 import RouteWrapper from './routes/RouteWrapper'
 
+// NOT allowed because html is undefined
+// document.html.style.width = '100vw'
+// document.html.style.height = '100vh'
+
+// document.body.style.width = '100vw'
+// document.body.style.height = '100vh'
+// document.body.style.margin = 0
+// document.body.style.padding = 0
+
+// Does NOT work
+// document.body.style = {
+//   width: '100vw',
+//   height: '100vh',
+// }
+
 // Override the default MUI theme:
 // https://material-ui.com/customization/default-theme/
 const theme = createMuiTheme({
@@ -35,18 +50,15 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles(theme => ({
   app: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexGrow: 1,
-    minHeight: '100vh',
-    backgroundColor: '#0087be',
+    width: '100vw',
+    height: '100vh',
+    padding: 0,
+    margin: 0,
   },
 
   content: {
-    // backgroundColor: theme.palette.primary.dark,
-    backgroundColor: '#282c34', // default overrides don't work here?
-    display: 'flex',
-    flexGrow: 1,
+    display: 'grid',
+    gridTemplateRows: '70px auto 70px',
   },
 }))
 
@@ -55,7 +67,7 @@ const App = props => {
   console.log(classes)
 
   return (
-    <>
+    <div className={classes.app}>
       {/* Globally reset styling  */}
       {/* https://material-ui.com/components/css-baseline/ */}
       <CssBaseline />
@@ -81,14 +93,6 @@ const App = props => {
             <RouteWrapper
               exact
               path="/small-content"
-              header={Header}
-              content={SmallContent}
-              footer={Footer}
-              layout={HeaderContentFooterLayout}
-            />
-            <RouteWrapper
-              exact
-              path="/sticky"
               header={Header}
               content={SmallContent}
               footer={Footer}
@@ -123,7 +127,7 @@ const App = props => {
           </Switch>
         </Router>
       </ThemeProvider>
-    </>
+    </div>
   )
 }
 
