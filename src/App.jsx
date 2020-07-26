@@ -16,6 +16,7 @@ import Team from './pages/Team'
 import Terms from './pages/Terms'
 
 // import EmptyLayout from './layouts/EmptyLayout'
+import DashboardLayout from './layouts/DashboardLayout'
 import HeaderContentFooterLayout from './layouts/HeaderContentFooterLayout'
 
 import RouteWrapper from './routes/RouteWrapper'
@@ -104,7 +105,7 @@ const App = props => {
               header={Header}
               content={Dashboard}
               footer={Footer}
-              layout={HeaderContentFooterLayout}
+              layout={DashboardLayout}
             />
             <RouteWrapper
               exact
