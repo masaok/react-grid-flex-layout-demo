@@ -1,3 +1,6 @@
+![React Grid Flex Layout Example](/screenshots/screenshot2.PNG)
+
+
 ## Quickstart
 
 ```
