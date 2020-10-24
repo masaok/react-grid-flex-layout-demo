@@ -9,13 +9,14 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 import Dashboard from './pages/Dashboard'
+import DashboardGridFloatingScroll from './pages/DashboardGridFloatingScroll'
 import Homepage from './pages/Homepage'
 import MediumContent from './pages/MediumContent'
 import SmallContent from './pages/SmallContent'
 import Team from './pages/Team'
 import Terms from './pages/Terms'
 
-// import EmptyLayout from './layouts/EmptyLayout'
+import EmptyLayout from './layouts/EmptyLayout'
 import DashboardLayout from './layouts/DashboardLayout'
 import HeaderContentFooterLayout from './layouts/HeaderContentFooterLayout'
 
@@ -106,6 +107,14 @@ const App = props => {
               content={Dashboard}
               footer={Footer}
               layout={DashboardLayout}
+            />
+            <RouteWrapper
+              exact
+              path="/dashboard-grid-floating-scroll"
+              header={Header}
+              content={DashboardGridFloatingScroll}
+              footer={Footer}
+              layout={EmptyLayout}
             />
             <RouteWrapper
               exact
