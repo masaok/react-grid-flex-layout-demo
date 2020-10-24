@@ -38,12 +38,6 @@ const Header = props => {
       <Button className={classes.button} variant="contained" href="/dashboard">
         Dashboard
       </Button>
-      <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll">
-        Dash Grid Floating Scroll
-      </Button>
-      <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll2">
-        Dash Grid Floating Scroll 2
-      </Button>
       <Button className={classes.button} variant="contained" href="/team">
         Team
       </Button>

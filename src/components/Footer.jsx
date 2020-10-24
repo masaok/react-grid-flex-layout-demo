@@ -23,17 +23,14 @@ const Footer = props => {
   return (
     <div className={classes.footer}>
       FOOTER
-      <Button className={classes.button} variant="contained" href="/">
-        Homepage
+      <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll">
+        Dash Grid Floating Scroll
       </Button>
-      <Button className={classes.button} variant="contained" href="/dashboard">
-        Dashboard
+      <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll2">
+        Dash Grid Floating Scroll 2
       </Button>
-      <Button className={classes.button} variant="contained" href="/team">
-        Team
-      </Button>
-      <Button className={classes.button} variant="contained" href="/terms">
-        Terms
+      <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll3">
+        Dash Grid Floating Scroll 3
       </Button>
     </div>
   )
