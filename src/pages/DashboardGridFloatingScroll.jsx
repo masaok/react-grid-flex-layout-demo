@@ -2,6 +2,9 @@ import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
+// Credit to this Stack Overflow:
+// https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-but-scroll-when-bigger
+
 const useStyles = makeStyles(theme => ({
   dashboard: {
     display: 'flex',
