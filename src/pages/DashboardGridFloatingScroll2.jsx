@@ -8,8 +8,8 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'grid',
-    gridTemplateRows: 'auto 1fr auto',
     gridTemplateColumns: '1fr 1fr',
+    gridTemplateRows: 'auto 1fr',
     height: '100%',
     '& > div': {
       border: '1px solid blue',
@@ -17,14 +17,14 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
-  left: {
-    gridColumn: 1,
-    gridRow: '1/4',
+  header: {
+    gridColumn: '1 / span 2',
+    gridRow: 1,
   },
 
-  header: {
-    gridColumn: 2,
-    gridRow: 1,
+  left: {
+    gridColumn: 1,
+    gridRow: 2,
   },
 
   problemChild: {
@@ -54,6 +54,7 @@ const DashboardGridFloatingScroll = props => {
   // return <div className={classes.dashboard}>DASHBOARD</div>
   return (
     <div className={classes.container}>
+      <div className={classes.header}>column header</div>
       <div className={classes.left}>
         left
         <br />I don't want this one to scroll
@@ -64,7 +65,6 @@ const DashboardGridFloatingScroll = props => {
         <br />
         the height of the whole grid container
       </div>
-      <div className={classes.header}>column header</div>
       <div className={classes.problemChild}>
         <div>
           problem child:
@@ -104,7 +104,6 @@ const DashboardGridFloatingScroll = props => {
           tall
         </div>
       </div>
-      <div className={classes.footer}>column footer</div>
     </div>
   )
 }

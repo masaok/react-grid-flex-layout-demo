@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
 
   button: {
     margin: theme.spacing(2),
+    whiteSpace: 'nowrap',
   },
 }))
 
@@ -38,7 +39,10 @@ const Header = props => {
         Dashboard
       </Button>
       <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll">
-        Dashboard Grid Floating Scroll
+        Dash Grid Floating Scroll
+      </Button>
+      <Button className={classes.button} variant="contained" href="/dashboard-grid-floating-scroll2">
+        Dash Grid Floating Scroll 2
       </Button>
       <Button className={classes.button} variant="contained" href="/team">
         Team
