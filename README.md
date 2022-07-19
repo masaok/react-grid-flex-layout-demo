@@ -1,3 +1,7 @@
+## Notes
+
+- This uses the old-style "RouteWrapper" custom component I made for layouts
+
 ![React Grid Flex Layout Example](/screenshots/screenshot2.PNG)
 
 
